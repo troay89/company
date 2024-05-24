@@ -1,0 +1,14 @@
+.header {
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: 60px 70px;
+    }
+
+    &__control {
+        display: flex;
+        align-items: center;
+    }
+}

@@ -1,0 +1,19 @@
+body {
+    max-width: var(--wide-general-content);
+    margin: 0 auto;
+    padding-inline: 20px;
+    font-family: var(--font-family);
+    font-size: clamp(16px, 1.28vw, 18px);
+    line-height: 1.28em;
+    font-weight: 400;
+    color: var(--color-black);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-black);
+}

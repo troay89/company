@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/0.5.271090-alpha">
+  <ItemGroup>
+    <Folder Include="image\png\desktop\" />
+    <Folder Include="image\png\mobile\" />
+    <Folder Include="styles\blocks\" />
+  </ItemGroup>
+</Project>
