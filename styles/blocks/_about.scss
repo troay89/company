@@ -1,0 +1,19 @@
+.about {
+    display: flex;
+    justify-content: space-between;
+
+    &__info {
+        max-width: 530px;
+
+        &-title {
+            font-size: clamp(43px, 5vw, 60px);
+            line-height: 76.56px;
+        }
+
+        &-text {
+            font-size: 20px;
+            line-height: 1.4em;
+            padding-block: 36px 35px;
+        }
+    }
+}
