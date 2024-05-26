@@ -1,0 +1,19 @@
+.services {
+
+    &__header {
+        display: flex;
+        justify-content: start;
+        column-gap: 40px;
+
+        &-description {
+            max-width: 580px;
+        }
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        padding-block: 80px 100px;
+    }
+}

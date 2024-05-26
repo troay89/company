@@ -1,0 +1,37 @@
+.card {
+    border: var(--border);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow-card);
+
+    &__services {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 600px;
+        padding: 49px;
+
+        &:nth-of-type(3n+1) {
+            background-color: var(--color-gray);
+        }
+
+        &:nth-of-type(3n+2) {
+            background-color: var(--color-green);
+        }
+
+        &:nth-of-type(3n+3) {
+            background-color: var(--color-dark);
+        }
+
+        &:nth-of-type(3n+3) .button__services-card {
+            color: white;
+
+            &::before {
+                background: center / 55% no-repeat url('./../image/svg/desktop/arrow-white.svg') var(--color-light);
+            }
+        }
+
+        &-title:last-of-type {
+            margin-bottom: 93px;
+        }
+    }
+}

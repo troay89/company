@@ -1,13 +1,15 @@
 :root {
     --color-light: #FFFFFF;
     --color-gray: #F3F3F3;
-    --color-green: B9FF66;
+    --color-green: #B9FF66;
     --color-dark: #191A23;
     --color-black: #000000;
     --font-family: 'Space Grotesk', sans-serif;
     --border: 1px solid var(--color-dark);
+    --shadow-card: 0 5px 0 0 var(--color-dark);
+    --border-radius-tiny: 7px;
     --border-radius-small: 14px;
-    --border-large-small: 45px;
+    --border-radius-large: 45px;
     --wide-content: 1240px;
     --wide-padding-content: 20px;
     --wide-general-content: calc(var(--wide-content) + var( --wide-padding-content) * 2);

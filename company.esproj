@@ -2,6 +2,5 @@
   <ItemGroup>
     <Folder Include="image\png\desktop\" />
     <Folder Include="image\png\mobile\" />
-    <Folder Include="styles\blocks\" />
   </ItemGroup>
 </Project>

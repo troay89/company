@@ -9,6 +9,24 @@
         border: var(--border);
     }
 
+    &__services-card {
+        position: relative;
+        padding: 6.5px 0;
+        width: 210px;
+
+        &::before {
+            display: block;
+            position: absolute;
+            content: "";
+            height: 100%;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            top: 50%;
+            transform: translate(0, -50%);
+            background: center / 55% no-repeat url('./../image/svg/desktop/arrow.svg') var(--color-dark);
+        }
+    }
+
     &-transparent {
         background-color: transparent;
     }

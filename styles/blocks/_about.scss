@@ -1,6 +1,11 @@
 .about {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
 
     &__info {
         max-width: 530px;
@@ -15,5 +20,12 @@
             line-height: 1.4em;
             padding-block: 36px 35px;
         }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        filter: grayscale(100%);
+        padding-block: 70px 140px;
     }
 }

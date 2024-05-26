@@ -99,13 +99,15 @@ svg * {
 :root {
   --color-light: #FFFFFF;
   --color-gray: #F3F3F3;
-  --color-green: B9FF66;
+  --color-green: #B9FF66;
   --color-dark: #191A23;
   --color-black: #000000;
   --font-family: "Space Grotesk", sans-serif;
   --border: 1px solid var(--color-dark);
+  --shadow-card: 0 5px 0 0 var(--color-dark);
+  --border-radius-tiny: 7px;
   --border-radius-small: 14px;
-  --border-large-small: 45px;
+  --border-radius-large: 45px;
   --wide-content: 1240px;
   --wide-padding-content: 20px;
   --wide-general-content: calc(var(--wide-content) + var( --wide-padding-content) * 2);
@@ -148,8 +150,20 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
-.services {
-  height: 600px;
+h2 {
+  font-size: clamp(36px, 3.33vw, 40px);
+  line-height: 51.04px;
+}
+
+h2.title-decoration {
+  padding-inline: 7px;
+  background-color: var(--color-green);
+  border-radius: var(--border-radius-tiny);
+}
+
+h3 {
+  font-size: clamp(26px, 2.5vw, 30px);
+  line-height: 38.28px;
 }
 
 .button {
@@ -161,6 +175,22 @@ h1, h2, h3, h4, h5, h6 {
 .button__header {
   padding: 19px 34px;
   border: var(--border);
+}
+.button__services-card {
+  position: relative;
+  padding: 6.5px 0;
+  width: 210px;
+}
+.button__services-card::before {
+  display: block;
+  position: absolute;
+  content: "";
+  height: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  top: 50%;
+  transform: translate(0, -50%);
+  background: center/55% no-repeat url("../image/svg/desktop/arrow.svg") var(--color-dark);
 }
 .button-transparent {
   background-color: transparent;
@@ -192,6 +222,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .about {
   display: flex;
+  flex-direction: column;
+}
+.about__top {
+  display: flex;
   justify-content: space-between;
 }
 .about__info {
@@ -205,4 +239,56 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 20px;
   line-height: 1.4em;
   padding-block: 36px 35px;
+}
+.about__list {
+  display: flex;
+  justify-content: space-between;
+  filter: grayscale(100%);
+  padding-block: 70px 140px;
+}
+
+.services__header {
+  display: flex;
+  justify-content: start;
+  column-gap: 40px;
+}
+.services__header-description {
+  max-width: 580px;
+}
+.services__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding-block: 80px 100px;
+}
+
+.card {
+  border: var(--border);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow-card);
+}
+.card__services {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+  padding: 49px;
+}
+.card__services:nth-of-type(3n+1) {
+  background-color: var(--color-gray);
+}
+.card__services:nth-of-type(3n+2) {
+  background-color: var(--color-green);
+}
+.card__services:nth-of-type(3n+3) {
+  background-color: var(--color-dark);
+}
+.card__services:nth-of-type(3n+3) .button__services-card {
+  color: white;
+}
+.card__services:nth-of-type(3n+3) .button__services-card::before {
+  background: center/55% no-repeat url("../image/svg/desktop/arrow-white.svg") var(--color-light);
+}
+.card__services-title:last-of-type {
+  margin-bottom: 93px;
 }
