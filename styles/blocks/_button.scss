@@ -7,12 +7,22 @@
     &__header {
         padding: 19px 34px;
         border: var(--border);
+
+        @include desktop {
+            padding: 5px 10px;
+        }
+    }
+
+    &__about {
+        @include desktop {
+            order: 4;
+        }
     }
 
     &__services-card {
         position: relative;
         padding: 6.5px 0;
-        width: 210px;
+        width: 218px;
 
         &::before {
             display: block;
@@ -23,7 +33,7 @@
             border-radius: 50%;
             top: 50%;
             transform: translate(0, -50%);
-            background: center / 55% no-repeat url('./../image/svg/desktop/arrow.svg') var(--color-dark);
+            background: center / 52% no-repeat url('./../image/svg/desktop/arrow.svg') var(--color-dark);
         }
     }
 

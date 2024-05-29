@@ -5,6 +5,11 @@
         justify-content: start;
         column-gap: 40px;
 
+
+        @include tablet {
+            justify-content: center;
+        }
+
         &-description {
             max-width: 580px;
         }
@@ -14,6 +19,41 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 40px;
-        padding-block: 80px 100px;
+        padding-block: 80px 122px;
+
+        @include desktop {
+            justify-items: center;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--color-gray);
+        border-radius: var(--border-radius-large);
+        padding-inline: 60px 135px;
+        margin-block-end: 163.5px;
+
+        @include tablet {
+            padding-inline: 30px;
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 26px;
+            max-width: 500px;
+        }
+
+        &-title {
+            margin: 0;
+        }
+
+        & img {
+            margin-block: -23.5px;
+        }
     }
 }

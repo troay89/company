@@ -27,10 +27,14 @@ h2 {
     line-height: 51.04px;
 }
 
-h2.title-decoration {
+.title-decoration {
     padding-inline: 7px;
     background-color: var(--color-green);
     border-radius: var(--border-radius-tiny);
+}
+
+.alternative {
+    background-color: var(--color-light);
 }
 
 h3 {

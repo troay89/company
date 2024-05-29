@@ -155,10 +155,14 @@ h2 {
   line-height: 51.04px;
 }
 
-h2.title-decoration {
+.title-decoration {
   padding-inline: 7px;
   background-color: var(--color-green);
   border-radius: var(--border-radius-tiny);
+}
+
+.alternative {
+  background-color: var(--color-light);
 }
 
 h3 {
@@ -176,10 +180,20 @@ h3 {
   padding: 19px 34px;
   border: var(--border);
 }
+@media (max-width: 1150px) {
+  .button__header {
+    padding: 5px 10px;
+  }
+}
+@media (max-width: 1150px) {
+  .button__about {
+    order: 4;
+  }
+}
 .button__services-card {
   position: relative;
   padding: 6.5px 0;
-  width: 210px;
+  width: 218px;
 }
 .button__services-card::before {
   display: block;
@@ -190,7 +204,7 @@ h3 {
   border-radius: 50%;
   top: 50%;
   transform: translate(0, -50%);
-  background: center/55% no-repeat url("../image/svg/desktop/arrow.svg") var(--color-dark);
+  background: center/52% no-repeat url("../image/svg/desktop/arrow.svg") var(--color-dark);
 }
 .button-transparent {
   background-color: transparent;
@@ -207,9 +221,19 @@ h3 {
   align-items: center;
   padding-block: 60px 70px;
 }
+@media (max-width: 1150px) {
+  .header__inner {
+    padding-block: 30px 40px;
+  }
+}
 .header__control {
   display: flex;
   align-items: center;
+}
+@media (max-width: 1150px) {
+  .header__logo-image {
+    width: 112px;
+  }
 }
 
 .navigation__list {
@@ -218,6 +242,13 @@ h3 {
   margin-right: 43px;
   font-size: 20px;
   line-height: 1.4em;
+}
+@media (max-width: 1150px) {
+  .navigation__list {
+    column-gap: 15px;
+    margin-right: 18px;
+    font-size: 18px;
+  }
 }
 
 .about {
@@ -228,17 +259,51 @@ h3 {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 1150px) {
+  .about__top {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 1150px) {
+  .about__top img {
+    order: 2;
+  }
+}
 .about__info {
   max-width: 530px;
+}
+@media (max-width: 1150px) {
+  .about__info {
+    display: contents;
+  }
+}
+@media (max-width: 1150px) {
+  .about__info-n {
+    display: none;
+  }
 }
 .about__info-title {
   font-size: clamp(43px, 5vw, 60px);
   line-height: 76.56px;
 }
+@media (max-width: 1150px) {
+  .about__info-title {
+    line-height: 55px;
+    text-align: center;
+    order: 1;
+  }
+}
 .about__info-text {
   font-size: 20px;
   line-height: 1.4em;
   padding-block: 36px 35px;
+}
+@media (max-width: 1150px) {
+  .about__info-text {
+    text-align: center;
+    order: 3;
+  }
 }
 .about__list {
   display: flex;
@@ -246,11 +311,24 @@ h3 {
   filter: grayscale(100%);
   padding-block: 70px 140px;
 }
+@media (max-width: 1023px) {
+  .about__list {
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    padding-block: 70px;
+  }
+}
 
 .services__header {
   display: flex;
   justify-content: start;
   column-gap: 40px;
+}
+@media (max-width: 1023px) {
+  .services__header {
+    justify-content: center;
+  }
 }
 .services__header-description {
   max-width: 580px;
@@ -259,7 +337,40 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  padding-block: 80px 100px;
+  padding-block: 80px 122px;
+}
+@media (max-width: 1150px) {
+  .services__body {
+    justify-items: center;
+    grid-template-columns: 1fr;
+  }
+}
+.services__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-gray);
+  border-radius: var(--border-radius-large);
+  padding-inline: 60px 135px;
+  margin-block-end: 163.5px;
+}
+@media (max-width: 1023px) {
+  .services__footer {
+    padding-inline: 30px;
+  }
+}
+.services__footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 26px;
+  max-width: 500px;
+}
+.services__footer-title {
+  margin: 0;
+}
+.services__footer img {
+  margin-block: -23.5px;
 }
 
 .card {
@@ -273,6 +384,12 @@ h3 {
   align-items: center;
   max-width: 600px;
   padding: 49px;
+}
+@media (max-width: 1150px) {
+  .card__services {
+    max-width: 800px;
+    width: 100%;
+  }
 }
 .card__services:nth-of-type(3n+1) {
   background-color: var(--color-gray);
@@ -288,6 +405,9 @@ h3 {
 }
 .card__services:nth-of-type(3n+3) .button__services-card::before {
   background: center/55% no-repeat url("../image/svg/desktop/arrow-white.svg") var(--color-light);
+}
+.card__services-title {
+  width: max-content;
 }
 .card__services-title:last-of-type {
   margin-bottom: 93px;

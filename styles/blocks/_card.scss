@@ -10,6 +10,11 @@
         max-width: 600px;
         padding: 49px;
 
+        @include desktop {
+            max-width: 800px;
+            width: 100%;
+        }
+
         &:nth-of-type(3n+1) {
             background-color: var(--color-gray);
         }
@@ -28,6 +33,10 @@
             &::before {
                 background: center / 55% no-repeat url('./../image/svg/desktop/arrow-white.svg') var(--color-light);
             }
+        }
+
+        &-title {
+            width: max-content;
         }
 
         &-title:last-of-type {

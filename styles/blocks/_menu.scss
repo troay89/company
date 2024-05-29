@@ -4,4 +4,10 @@
     margin-right: 43px;
     font-size: 20px;
     line-height: 1.4em;
+
+    @include desktop {
+        column-gap: 15px;
+        margin-right: 18px;
+        font-size: 18px;
+    }
 }
