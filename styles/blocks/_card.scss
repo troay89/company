@@ -15,6 +15,12 @@
             width: 100%;
         }
 
+        @include mobile {
+            display: grid;
+            grid-template-columns: auto auto;
+            align-items: end;
+        }
+
         &:nth-of-type(3n+1) {
             background-color: var(--color-gray);
         }
@@ -30,17 +36,43 @@
         &:nth-of-type(3n+3) .button__services-card {
             color: white;
 
+            @include mobile {
+                color: transparent;
+            }
+
             &::before {
                 background: center / 55% no-repeat url('./../image/svg/desktop/arrow-white.svg') var(--color-light);
             }
         }
 
+        &-info {
+            @include mobile {
+                display: contents;
+            }
+        }
+
         &-title {
             width: max-content;
+
+            @include mobile {
+                grid-column: -1 / 1;
+            }
         }
 
         &-title:last-of-type {
             margin-bottom: 93px;
+
+            @include mobile {
+                margin-bottom: 13.8px;
+            }
+        }
+
+        & img {
+            @include mobile {
+                align-self: center;
+                max-width: 165px;
+                height: auto;
+            }
         }
     }
 }

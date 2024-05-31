@@ -10,8 +10,20 @@
             justify-content: center;
         }
 
+        @include mobile {
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 27px;
+        }
+
         &-description {
             max-width: 580px;
+
+            @include mobile {
+                max-width: 100%;
+                text-align: center;
+            }
         }
     }
 
@@ -24,6 +36,11 @@
         @include desktop {
             justify-items: center;
             grid-template-columns: 1fr;
+        }
+
+        @include mobile {
+            padding-block: 38px 70px;
+            gap: 30px;
         }
     }
 
@@ -40,12 +57,20 @@
             padding-inline: 30px;
         }
 
+        @include mobile {
+            padding: 50px;
+        }
+
         &-info {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             row-gap: 26px;
             max-width: 500px;
+
+            @include mobile {
+                row-gap: 20px;
+            }
         }
 
         &-title {
@@ -54,6 +79,10 @@
 
         & img {
             margin-block: -23.5px;
+
+            @include mobile {
+                display: none;
+            }
         }
     }
 }

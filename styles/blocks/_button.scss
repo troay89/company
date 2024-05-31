@@ -4,6 +4,15 @@
     border-radius: var(--border-radius-small);
     border: none;
 
+    @include hover {
+        color: pink;
+        transition: var(--transition);
+    }
+
+    @include mobile {
+        width: 100%;
+    }
+
     &__header {
         padding: 19px 34px;
         border: var(--border);
@@ -23,6 +32,14 @@
         position: relative;
         padding: 6.5px 0;
         width: 218px;
+
+        @include mobile {
+            color: transparent;
+            width: 120px;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
 
         &::before {
             display: block;
@@ -45,5 +62,13 @@
         color: var(--color-light);
         background-color: var(--color-dark);
         padding: 20px 35px;
+    }
+}
+
+.visible-mobile {
+    display: none;
+
+    @include mobile {
+        display: block;
     }
 }

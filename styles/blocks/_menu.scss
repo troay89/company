@@ -10,4 +10,17 @@
         margin-right: 18px;
         font-size: 18px;
     }
+
+    @include tablet {
+        column-gap: 10px;
+        margin-right: 13px;
+        font-size: 16px;
+    }
+
+    &-item {
+        @include hover {
+            transform: scale(1.1);
+            transition: var(--transition);
+        }
+    }
 }

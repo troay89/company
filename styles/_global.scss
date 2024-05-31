@@ -7,6 +7,11 @@ body {
     line-height: 1.28em;
     font-weight: 400;
     color: var(--color-black);
+    overflow-x: hidden;
+
+    @include mobile {
+        line-height: 24px;
+    }
 }
 
 ul {
@@ -40,4 +45,8 @@ h2 {
 h3 {
     font-size: clamp(26px, 2.5vw, 30px);
     line-height: 38.28px;
+
+    @include mobile {
+        line-height: 33.18px;
+    }
 }

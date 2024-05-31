@@ -15,6 +15,11 @@
             @include desktop {
                 order: 2;
             }
+
+            @include mobile {
+                height: 310px;
+                margin-block-start: 10px;
+            }
         }
     }
 
@@ -40,6 +45,10 @@
                 text-align: center;
                 order: 1;
             }
+
+            @include mobile {
+                text-align: left;
+            }
         }
 
         &-text {
@@ -50,6 +59,13 @@
             @include desktop {
                 text-align: center;
                 order: 3;
+            }
+
+            @include mobile {
+                font-size: 16px;
+                line-height: 1.5em;
+                text-align: left;
+                padding-block: 21px 40px;
             }
         }
     }
@@ -65,6 +81,47 @@
             flex-wrap: wrap;
             column-gap: 40px;
             padding-block: 70px;
+        }
+
+        @include mobile {
+            padding-block: 60px;
+        }
+
+        @include mobile-s {
+            justify-content: end;
+            column-gap: 38px;
+            row-gap: 20px;
+            width: calc(100vw + 120px);
+            margin-inline: -84px -76px;
+        }
+
+
+        &-item {
+            transition: var(--transition);
+
+            @include hover {
+                transform: scale(1.1);
+                transition: var(--transition);
+            }
+
+            &:nth-child(4) {
+                @include mobile-s {
+                    order: 5;
+                }
+            }
+
+            &:nth-child(5) {
+                @include mobile-s {
+                    order: 4;
+                }
+            }
+
+            &:nth-child(6) {
+                @include mobile-s {
+                    margin-right: 90px;
+                    order: 6;
+                }
+            }
         }
     }
 }

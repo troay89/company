@@ -1,0 +1,26 @@
+.burger-button {
+    width: 48px;
+    aspect-ratio: 1;
+    position: relative;
+    border-radius: var(--border-radius-small);
+    padding: 0;
+    background-color: transparent;
+    border: none;
+
+    @include hover {
+        background-color: var(--color-accent);
+    }
+
+    &::after {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 24px;
+        content: '';
+        width: 50%;
+        height: 2px;
+        background-color: var(--color-dark);
+        border-radius: 5px;
+        box-shadow: 0 -8px, 0 8px;
+    }
+}
