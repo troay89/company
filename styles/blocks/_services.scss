@@ -1,37 +1,9 @@
 .services {
-
-    &__header {
-        display: flex;
-        justify-content: start;
-        column-gap: 40px;
-
-
-        @include tablet {
-            justify-content: center;
-        }
-
-        @include mobile {
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            row-gap: 27px;
-        }
-
-        &-description {
-            max-width: 580px;
-
-            @include mobile {
-                max-width: 100%;
-                text-align: center;
-            }
-        }
-    }
-
     &__body {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 40px;
-        padding-block: 80px 122px;
+        padding-block-end: 122px;
 
         @include desktop {
             justify-items: center;
@@ -39,7 +11,7 @@
         }
 
         @include mobile {
-            padding-block: 38px 70px;
+            padding-block-end: 70px;
             gap: 30px;
         }
     }

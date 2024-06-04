@@ -1,0 +1,41 @@
+.case {
+
+    &__body {
+        display: flex;
+        background-color: var(--color-dark);
+        border-radius: var(--border-radius-large);
+        padding: 70px 60px;
+        color: white;
+
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            width: 100%;
+            flex-grow: 1;
+        }
+
+        &-info:not(:first-child) {
+            padding-inline-start: 64px;
+        }
+
+        &-info:not(:last-of-type) {
+            padding-inline-end: 64px;
+            border-right: 1px solid var(--color-light);
+        }
+
+        &-text {
+            width: 286px;
+        }
+
+        &-link {
+            display: flex;
+            align-items: center;
+            column-gap: 15px;
+            color: var(--color-green);
+            font-size: 20px;
+            line-height: 1.4em;
+        }
+    }
+}
