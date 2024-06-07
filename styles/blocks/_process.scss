@@ -1,0 +1,38 @@
+.process {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        list-style: none;
+    }
+
+    &__item {
+    }
+
+    &__details {
+        border: var(--border);
+        border-radius: var(--border-radius-large);
+        box-shadow: var(--shadow-card);
+        background-color: var(--color-gray);
+
+
+        &[open] {
+            background-color: var(--color-green);
+        }
+
+        &-header {
+            display: flex;
+            padding: 41px 57px 41px 60px;
+
+            & h3 {
+                margin: 0;
+            }
+        }
+
+        &-button {
+            @include square(56px);
+            border: var(--border);
+            border-radius: 50%;
+        }
+    }
+}
