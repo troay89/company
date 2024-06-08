@@ -16,8 +16,8 @@
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        padding-block-end: 38px;
-        row-gap: 27px;
+        padding-block-end: 39px;
+        row-gap: 26px;
     }
 
     &-description {
@@ -28,4 +28,11 @@
             text-align: center;
         }
     }
+
+    &-alt {
+        @include mobile {
+            padding-block-end: 31px
+        }
+    }
 }
+

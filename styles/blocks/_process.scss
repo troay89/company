@@ -1,31 +1,83 @@
 .process {
+
+    &__header {
+        &-titles {
+            display: flex;
+
+            @include mobile {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        &-title:first-child {
+            border-end-end-radius: 0px;
+
+            @include mobile {
+                border-end-end-radius: 7px;
+            }
+        }
+
+        &-title:last-of-type {
+            margin-inline-start: -4px;
+            border-start-start-radius: 0px;
+
+            @include mobile {
+                margin-inline-start: 0px;
+                border-start-start-radius: 7px;
+                font-size: 40px;
+                line-height: 51px;
+                margin-block: -4px 4px;
+            }
+        }
+    }
+
     &__list {
         display: flex;
         flex-direction: column;
         row-gap: 30px;
         list-style: none;
         counter-reset: details;
+
+        @include mobile {
+            row-gap: 20px;
+        }
     }
 
     &__item {
         counter-increment: details;
+        margin-inline: 2px 4px;
+
+        @include mobile {
+            margin-inline: 0;
+        }
     }
 
     &__details {
         --indicatorVerticalRotate: 90deg;
+        --widthSign: 20px;
         border: var(--border);
         border-radius: var(--border-radius-large);
         box-shadow: var(--shadow-card);
         background-color: var(--color-gray);
-        max-height: 159px;
+        max-height: 159.38px;
         overflow: hidden;
-        transition: all 0.6s ease;
+        transition: max-height 0.4s ease;
+
+        @include mobile {
+            --widthSign: 13px;
+        }
 
 
         &[open] {
             --indicatorVerticalRotate: 0deg;
+            --widthSign: 18px;
             background-color: var(--color-green);
             max-height: 279px;
+
+            @include mobile {
+                max-height: 320px;
+            }
         }
 
         &-header {
@@ -34,9 +86,19 @@
             align-items: center;
             padding: 50.7px 57px 50.7px 60px;
 
+            @include mobile {
+                padding: 29px 30px;
+            }
+
             & h3 {
                 display: flex;
                 margin: 0;
+
+                @include mobile {
+                    align-items: center;
+                    font-size: 18px;
+                    line-height: 23px;
+                }
 
                 &::before {
                     content: '0' counter(details);
@@ -45,15 +107,22 @@
 
                     @include mobile {
                         font-size: 30px;
+                        line-height: 38.28px;
+                        padding-inline-end: 30px;
                     }
                 }
             }
         }
 
         &-body {
-            padding-block: 30px 41px;
+            padding-block: 30px 54px;
             margin-inline: 60px;
             border-top: 1px solid var(--color-black);
+            margin-block-start: -12px;
+
+            @include mobile {
+                text-align: center;
+            }
         }
 
         &-button {
@@ -65,12 +134,17 @@
             border: var(--border);
             border-radius: 50%;
 
+            @include mobile {
+                @include square(30px);
+                flex-shrink: 0;
+            }
+
             &::after,
             &::before {
                 @include abs-center;
                 content: '';
-                height: 3px;
-                width: 30px;
+                height: 4px;
+                width: var(--widthSign);
                 background-color: var(--color-dark);
             }
 
