@@ -63,6 +63,13 @@
         background-color: var(--color-dark);
         padding: 20px 35px;
     }
+
+    &__team {
+        display: block;
+        min-width: 269px;
+        margin-block-start: 38px;
+        margin-left: auto;
+    }
 }
 
 .visible-mobile {

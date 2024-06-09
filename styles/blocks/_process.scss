@@ -1,4 +1,9 @@
 .process {
+    margin-block-end: 138px;
+
+    @include mobile {
+        margin-block-end: 60px;
+    }
 
     &__header {
         &-titles {

@@ -1,0 +1,62 @@
+.team {
+
+    &__body {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 38px 40px;
+
+        @include desktop-x {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+            gap: 29px 0;
+        }
+    }
+
+    &__card {
+        position: relative;
+        padding: 39px 49px;
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+
+        &:not(:nth-of-type(-n+4)) {
+            @include mobile {
+                display: none;
+            }
+        }
+
+        &-header {
+            display: flex;
+            column-gap: 20px
+        }
+
+        &-body {
+            padding-block-start: 28px;
+            margin-block-start: 28px;
+            border-top: var(--border);
+
+            @include mobile {
+                padding-block-start: 20px;
+                margin-block-start: 20px;
+            }
+        }
+
+        &-link {
+            position: absolute;
+            right: 34px;
+            top: 39px;
+
+            @include mobile {
+                right: 49px;
+            }
+        }
+    }
+
+    &__about {
+        align-self: end;
+    }
+}

@@ -165,6 +165,12 @@ svg * {
   }
 }
 
+@media (min-width: 768px) {
+  .show-above-table {
+    display: none;
+  }
+}
+
 body {
   max-width: var(--wide-general-content);
   margin: 0 auto;
@@ -217,6 +223,17 @@ h3 {
 @media (max-width: 767px) {
   h3 {
     line-height: 33.18px;
+  }
+}
+
+h4 {
+  font-size: clamp(18px, 1.7vw, 20px);
+  line-height: 25.52px;
+  margin: 0;
+}
+@media (max-width: 767px) {
+  h4 {
+    line-height: 22.97px;
   }
 }
 
@@ -288,6 +305,12 @@ h3 {
   color: var(--color-light);
   background-color: var(--color-dark);
   padding: 20px 35px;
+}
+.button__team {
+  display: block;
+  min-width: 269px;
+  margin-block-start: 38px;
+  margin-left: auto;
 }
 
 .visible-mobile {
@@ -745,6 +768,14 @@ h3 {
   }
 }
 
+.process {
+  margin-block-end: 138px;
+}
+@media (max-width: 767px) {
+  .process {
+    margin-block-end: 60px;
+  }
+}
 .process__header-titles {
   display: flex;
 }
@@ -898,4 +929,63 @@ h3 {
 .process__details-button::after {
   rotate: var(--indicatorVerticalRotate);
   transition: var(--transition);
+}
+
+.team__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 38px 40px;
+}
+@media (max-width: 1400px) {
+  .team__body {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .team__body {
+    grid-template-columns: 1fr;
+    gap: 29px 0;
+  }
+}
+.team__card {
+  position: relative;
+  padding: 39px 49px;
+}
+@media (max-width: 767px) {
+  .team__card {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .team__card:not(:nth-of-type(-n+4)) {
+    display: none;
+  }
+}
+.team__card-header {
+  display: flex;
+  column-gap: 20px;
+}
+.team__card-body {
+  padding-block-start: 28px;
+  margin-block-start: 28px;
+  border-top: var(--border);
+}
+@media (max-width: 767px) {
+  .team__card-body {
+    padding-block-start: 20px;
+    margin-block-start: 20px;
+  }
+}
+.team__card-link {
+  position: absolute;
+  right: 34px;
+  top: 39px;
+}
+@media (max-width: 767px) {
+  .team__card-link {
+    right: 49px;
+  }
+}
+.team__about {
+  align-self: end;
 }
